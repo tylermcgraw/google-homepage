@@ -15,10 +15,38 @@
             header {
                 height: 50px;
             }
-            .header-links {
+            .left-header-links {
                 height: 30px;
+                float: left;
+                margin: 10px 0px 10px 10px;
+                padding: 10px;
+            }
+            .left-header-links:hover {
+                text-decoration: underline;
+            }
+            .right-header-links {
+                height: 30px;
+                float: right;
+                margin: 10px 10px 0px 10px;
+                padding: 10px;
+            }
+            .right-header-links:hover {
+                text-decoration: underline;
+            }
+            #sign-in-button {
+                height: 30px;
+                line-height: 0em;
+                color:ghostwhite;
                 vertical-align: middle;
-                margin: 25px;
+                float: right;
+                margin: 10px 20px 0px 10px;
+                padding: 10px;
+                background-color: #1a73e8;
+                border: none;
+                border-radius: 10%;
+            }
+            #sign-in-button:hover {
+                background-color: #1a73e8e0;
             }
             .logo {
                 display: flex;
@@ -47,6 +75,10 @@
                 min-width: 54px;
                 text-align: center;
             }
+            .search-button:hover {
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+            }
             .break {
                 flex-basis: 100%;
                 height: 0;
@@ -54,29 +86,40 @@
             footer {
                 background-color: #f2f2f2;
                 position: fixed;
-                height: 100px;
                 bottom: 0px;
+                height: 100px;
                 width: 100%;
-                vertical-align: middle;
-                display: flex;
-                justify-content: center;
-                margin: 10px;
-                flex-direction: column;
+                display:flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+            }
+            #carbon-neutral {
+                text-align: center;
+                flex-basis: 100%;
+                margin: 15px;
+            }
+            #carbon-neutral:hover {
+                text-decoration: underline;
+            }
+            .footer-links {
+                align-self: flex-end;
+                margin: 15px;
+            }
+            .footer-links:hover {
+                text-decoration: underline;
             }
         </style>
     </head>
     <body>
         <header>
             <div>
-                <div>
-                    <a class="header-links" url="https://www.google.com/about">About</a>
-                    <a class="header-links" url="https://www.google.com/store">Store</a>
-                <!--</div>
-                <div>-->
-                    <a class="header-links" url="https://www.google.com/gmail">Gmail</a>
-                    <a class="header-links" url="https://www.google.com/images">Image</a>
-                    <button class="header-links">Sign In</button>
-                </div>
+                <a class="left-header-links" url="https://www.google.com/about">About</a>
+                <a class="left-header-links" url="https://www.google.com/store">Store</a>
+                <button id="sign-in-button">Sign In</button>
+                <a class="right-header-links" url="https://www.google.com/images">Image</a>
+                <a class="right-header-links" url="https://www.google.com/gmail">Gmail</a>
             </div>
         </header>
         <img class="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo">
@@ -88,17 +131,14 @@
             <button class="search-button">I'm Feeling Lucky</button>    
         </div>
         <footer>
-            <div>
-                <a url="https://www.google.com/commitments">Carbon neutral since 2007</a>
-            </div>
-            <div>
-                <a url="https://www.google.com/advertising">Advertising</a>
-                <a url="https://www.google.com/business">Business</a>
-                <a url="https://www.google.com/howsearchworks">How Search Works</a>
-                <a url="https://www.google.com/privacy">Privacy</a>
-                <a url="https://www.google.com/terms">Terms</a>
-                <a url="https://www.google.com/settings">Settings</a>
-            </div>
+            <a id="carbon-neutral" url="https://www.google.com/commitments">Carbon neutral since 2007</a>
+            <a class="footer-links" url="https://www.google.com/advertising">Advertising</a>
+            <a class="footer-links" url="https://www.google.com/business">Business</a>
+            <a class="footer-links" url="https://www.google.com/howsearchworks">How Search Works</a>
+            <div class="footer-links" style="flex-basis: 20%"></div>
+            <a class="footer-links" url="https://www.google.com/privacy">Privacy</a>
+            <a class="footer-links" url="https://www.google.com/terms">Terms</a>
+            <a class="footer-links" url="https://www.google.com/settings">Settings</a>
         </footer>
     </body>
 </html>

@@ -1,1 +1,1 @@
-Deconstruct a web page and rebuild it from scratch
+Deconstruct google.com and rebuild it from scratch (appearance, not function)
